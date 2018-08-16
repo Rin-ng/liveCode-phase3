@@ -4,17 +4,14 @@ const originalState = {
    movement: 0,
 }
 
-const storeData = (state = originalState, action) => {
+const playerReducer = (state = originalState, action) => {
    switch(action.type){
       case 'movePlayer':{
          return Object.assign({}, state, {movement: action.movement}) ;
       }
-      // case 'itemLoaded':{
-      //    return Object.assign({}, state, {loaded: action.loaded})
-      // }
       default: 
       return state
    }
 }
 
-export default storeData
+export default playerReducer

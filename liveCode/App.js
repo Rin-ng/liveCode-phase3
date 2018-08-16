@@ -18,36 +18,6 @@ import HomeScreen from './src/containers/Home'
 import {Provider} from 'react-redux'
 import store from './src/redux/store/index'
 
-// import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
-// import Ionicons from 'react-native-vector-icons/Ionicons';
-
-// const BottomNav =  createMaterialBottomTabNavigator({
-//   Home: { 
-//     screen: HomeScreen
-//   },
-//   Surprise: { screen: SecondPage },
-// }, {
-//   initialRouteName: 'Home',
-//   showIcon: true,
-//   showLabel: true,
-//   activeTintColor: '#f0edf6',
-//   inactiveTintColor: '#3e2465',
-//   barStyle: { backgroundColor: 'lightblue' },
-//   navigationOptions: ({ navigation }) => ({
-//     tabBarIcon: ({ focused, tintColor }) => {
-//       const { routeName } = navigation.state;
-//       let iconName;
-//       if (routeName === 'Home') {
-//         iconName = `md-home`;
-//       } else if (routeName === 'Surprise') {
-//         iconName = `md-contacts`;
-//       }
-//       return <Ionicons name={iconName} size={25} color={tintColor} />;
-//     },
-//   }),
-// });
-
-
 const StackNav = createStackNavigator({
   Welcome: { 
     screen: WelcomeScreen,
@@ -58,10 +28,16 @@ const StackNav = createStackNavigator({
   Home: { 
     screen: HomeScreen,
     navigationOptions:{
-      title: "Home?",
-      // headerLeft: null
+      title: "Snake and Up!",
     }
   },
+  EndGame: {
+    screen: EndGameScreen,
+    navigationOptions:{
+      title: "Replay?",
+      headerLeft: null
+    }
+  }
 });
 
 

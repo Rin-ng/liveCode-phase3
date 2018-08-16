@@ -1,12 +1,14 @@
 export function DiceRandom(){
-   var randomDice = Math.floor(6 * Math.random()) + 1
-   // dispatch(playerLocation(randomDice))
-   dispatch(movePlayer(randomDice))
+ 
+   return(dispatch) => {
+      var randomDice = Math.floor(6 * Math.random()) + 1
+      dispatch(movePlayer(randomDice))
+   }  
 }
 
-export function movePlayer(randomDice){
+export function movePlayer(moveNum){
    return{
       type: 'movePlayer',
-      movement: randomDice
+      movement: moveNum
    }
 }

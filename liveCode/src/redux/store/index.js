@@ -1,6 +1,6 @@
 import React from 'react'
 import {createStore, applyMiddleware} from 'redux'
-import playerReducer from '../reducers/getDataReducer'
+import playerReducer from '../reducers/playerReducer'
 import thunk from 'redux-thunk';
 
 const store = createStore(playerReducer, 
